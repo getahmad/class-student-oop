@@ -20,11 +20,11 @@
     <div class="container header-content">
         <h2>Student Data</h2>
         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Add Student</button>
-        <button type="button" class="btn btn-secondary">Edit Student</button>
-        <!-- <button type="button" class="btn btn-secondary">Remove</button> -->
-
-    <!-- <section>
-        <table class="table table-sm mt-4">
+        <button type="button" class="btn btn-secondary" onclick="myDeleteFunction()">Del Row</button>
+        <button type="button" class="btn btn-secondary">Edit</button>
+ 
+    <section>
+        <table class="table table-sm mt-4"  > 
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -35,38 +35,13 @@
                 <th scope="col">Hobbies</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">GA001</th>
-                <td>Mark</td>
-                <td>19</td>
-                <td>2001-10-18</td>
-                <td>male</td>
-                <td>Football</td>
-              </tr>
-
-              <tr>
-                <th scope="row">GA002</th>
-                <td>Maulin</td>
-                <td>26</td>
-                <td>1994-10-18</td>
-                <td>female</td>
-                <td>Dance</td>
-              </tr>
-
-              <tr scope="row" id="mytr">
-                <th id="myth"></th>
-                <td id="mytd1"></td>
-                <td id="mytd2"></td>
-                <td id="mytd3"></td>
-                <td id="mytd4"></td>
-                <td id="mytd5"></td>
-              </tr>
+            <tbody id="myTable">
 
             </tbody>
           </table>
-        </div>
-    </section> -->
+        </section>
+    </div>
+    
 
 
     <section>
@@ -148,15 +123,15 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onclick="addStudent()">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                  
+                        <button type="button" class="btn btn-primary" onclick="myCreateFunction()">Save changes</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
  
-    <ul id="myUL"></ul>
+  
 
 
 
@@ -177,7 +152,7 @@
   
         $(function(){
         $(".datepicker").datepicker({
-            format: 'yyyy-mm-dd',
+            format: 'dd-mm-yyyy',
             autoclose: true,
             todayHighlight: true,
         });
