@@ -132,11 +132,7 @@ for(let i = 0; i < student2.hobbies.length; i++){
 
 
 
-
-//coba function add student
-
-function addStudent() {
-
+function myCreateFunction() {
   const studentId = document.querySelector("#inputId").value
   const name = document.querySelector("#inputName").value
   const age = document.querySelector("#inputAge").value
@@ -153,45 +149,26 @@ function addStudent() {
         hobbies : hobbies
     })
 
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  
 
-  let li =document.createElement("li");
-  li.innerText = newStudent.dataStudent;
-  document.getElementById("myUL").appendChild(li);
+  cell1.innerHTML = newStudent.studentId
+  cell2.innerHTML = newStudent.name
+  cell3.innerHTML = newStudent.age
+  cell4.innerHTML = newStudent.dateOfBirth
+  cell5.innerHTML = newStudent.gender
+  cell6.innerHTML = newStudent.hobbies
 
-  }
+}
 
+function myDeleteFunction() {
+  document.getElementById("myTable").deleteRow(0);
+}
 
-
-
-
-
-
-
-
-// const addStudent = () => {
-
-//   const studentId = document.querySelector("#inputId").value
-//   const name = document.querySelector("#inputName").value
-//   const age = document.querySelector("#inputAge").value
-//   const dateOfBirth = document.querySelector("#inputDob").value
-//   const gender = document.querySelector("#inputGender").value
-//   const hobbies = document.querySelector("#inputHobby").value
-
-//       const newStudent = new Student({
-//         name: name,
-//         age : age,
-//         dateOfBirth : dateOfBirth,
-//         gender : gender,
-//         studentId : studentId,
-//         hobbies : hobbies
-//     })
-
-//     document.getElementById("myth").innerText =newStudent.studentId;
-//     document.getElementById("mytd1").innerText =newStudent.name;
-//     document.getElementById("mytd2").innerText =newStudent.age;
-//     document.getElementById("mytd3").innerText =newStudent.dateOfBirth;
-//     document.getElementById("mytd4").innerText =newStudent.gender;
-//     document.getElementById("mytd5").innerText =newStudent.hobbies;
-
-//     document.getElementById("result").innerHTML = newStudent.dataStudent;
-//   }
